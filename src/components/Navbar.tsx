@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function Navbar() {
+const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const link = [
@@ -24,36 +24,38 @@ function Navbar() {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 ">
+    <div className="fixed flex h-20 w-full items-center justify-between bg-black px-4 text-white">
       <div>
-        <h1 className="text-5xl font-signature ml-2">Hritik Kuntal</h1>
+        <h1 className="ml-2 font-signature text-3xl md:text-4xl">
+          Hritik Kuntal
+        </h1>
       </div>
+
       <ul className="hidden md:flex">
         {link.map((link) => (
           <li
             key={link.id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+            className="cursor-pointer px-4 font-medium capitalize text-gray-400 underline-offset-4 duration-200 hover:text-white hover:underline"
           >
-            {" "}
             {link.link}
           </li>
         ))}
       </ul>
+
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidde"
+        className="z-10 cursor-pointer text-gray-400 md:hidden"
       >
-        {nav ? <FaTimes size={30}></FaTimes> : <FaBars size={30}></FaBars>}
+        {nav ? <FaTimes size={20}></FaTimes> : <FaBars size={20}></FaBars>}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-black to-gray-800 text-gray-400">
           {link.map((link) => (
             <li
               key={link.id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl "
+              className="cursor-pointer px-4 py-6 text-4xl capitalize hover:text-white"
             >
-              {" "}
               {link.link}
             </li>
           ))}
@@ -61,6 +63,6 @@ function Navbar() {
       )}
     </div>
   );
-}
+};
 
 export default Navbar;
