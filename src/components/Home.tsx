@@ -16,7 +16,7 @@ const Home = () => {
         <div>
           <button className="group my-2 flex w-fit items-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 font-semibold text-white">
             Portfolio
-            <span className="duration-300 group-hover:translate-x-1">
+            <span className="duration-300 group-hover:rotate-90">
               <MdKeyboardArrowRight className="h-5 w-5" />
             </span>
           </button>
