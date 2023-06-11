@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className="fixed flex h-20 w-full items-center justify-between bg-black px-4 text-white">
       <div>
         <h1 className="ml-2 font-signature text-3xl md:text-4xl">
-          Hritik Kuntal
+          Hrithik Kuntal
         </h1>
       </div>
 

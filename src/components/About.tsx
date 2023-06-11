@@ -1,5 +1,3 @@
-import React from "react";
-
 function About() {
   return (
     <div className="form-gray-800 h-screen w-full bg-gradient-to-b to-black text-white">
